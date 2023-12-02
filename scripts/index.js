@@ -63,12 +63,12 @@ for (let i = 0; i < cardImages.length; i++) {
    cardImages[i].src = myHand.cards[i].cardImage();
 // Flip the card images when clicked
 cardImages[i].onclick = function() {
-   if (this.src.includes("../images/cardback.png")) {
+   if (this.src.includes("cardback.png")) {
       // Show the front of the card
       this.src = myHand.cards[i].cardImage();
    } else {
       // Show the back of the card
-      this.src = "../images/cardback.png";
+      this.src = "cardback.png";
    }
 }
 
@@ -91,7 +91,7 @@ cardImages[i].onclick = function() {
       
    // Replace cards marked to be discarded
    for (let i = 0; i < cardImages.length; i++) {
-      if (cardImages[i].src.includes("../images/cardback.png")) {
+      if (cardImages[i].src.includes("cardback.png")) {
          // Replace the card and its image on the table
          myHand.replaceCard(i, myDeck);
          cardImages[i].src = myHand.cards[i].cardImage();
